@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterative Design</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <main>
+        <div class="header">
+            <header>
+                <h1>Iterative Redesign - Sesame</h1>
+            </header>
+        </div>
+
+        <div class="intro">
+            <h2>What is this page about?</h2>
+            <p>
+                Have you ever encountered websites that are poorly designed and wondered how we could improve them?
+            </p>
+            <p>
+                In this webpage, we will explore how to redesign a website to improve its usability and accessibility, from identifying issues to creating 
+                Figma prototypes and actually implementing the redesign. We will use the website of Ceremony Cafe, a famous 
+                cafe in Providence, Rhode Island, as example 🙂
+            </p>
+        </div>
+
+        <div class="section-1">
+            <h2>What are issues with the Ceremony Cafe website?</h2>
+            <p>Ceremony Cafe in Providence is one of the most famous cafes in the region, 
+                so it's interesting to examine whether its online presence is as 
+                established as its physical store. Although the website contains all 
+                the relevant information, some of it is not organized in a user-friendly manner. 
+                The <a href="https://www.ceremonypvd.com/menus">menu page</a> (see scrollable image below) consists of a series of static and hard-to-read images.
+            </p>
+            <div class="sketch">
+                <img src="ceremony_menu.png" alt="Menu page of Ceremony Cafe's website">
+            </div>
+            <p>
+                Here are some issues with this page: 
+                </ul>
+                <div class="dropdown-menu">
+                    <details>
+                        <summary>Accessibility</summary>
+                        <p>
+                            <ul>
+                                <li>
+                                    as revealed by <a href="https://wave.webaim.org/">WAVE</a>, an automated tool for assessing website accessibility,
+                                    the alt texts for the menu images are ineffective since they do not capture details about specific drinks
+                                </li>
+                                <li>
+                                    for example, the alt text for the bar menu is simply “cocktails,” which is unhelpful to users
+                                </li>
+                                <li>
+                                    the small default size of the menu images further lowers accessibility
+                                </li>
+                            </ul>
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Learnability</summary>
+                        <p>
+                            <ul>
+                                <li>
+                                    there lacks a high-level explanation of the different menus and their display order, which makes it difficult for first-time users to 
+                                    learn the webpage structure
+                                </li>
+                                <li>
+                                    the lack of clear differentiation between different 
+                                    types of information (e.g., menu subsection titles, item descriptions) 
+                                    further adds to the confusion
+                                </li>
+                            </ul>
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Memorability</summary>
+                        <p>
+                            <ul>
+                                <li>
+                                the menus do not look visually differentiable enough and do not follow a clear color code, so it's easy for users to 
+                                forget what menus there are when and where they are located, when they revisit the website
+                                </li>
+                            </ul>
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Efficiency</summary>
+                        <p>
+                            <ul>
+                                <li>
+                                    the page does not effectively support users in
+                                    finding specific drinks or learning more about them
+                                </li>
+                                <li>
+                                    this is because the menus are vertically layered on top of each other, and it takes a long time for users to 
+                                    scroll through the page and find the menu they are interested in
+                                </li>
+                            </ul>
+                        </p>
+                    </details>
+             </p>
+             <p>
+                In addition, which doesn't align with 
+                user's <b>conceptual models</b> (i.e., common expectations) for cafe websites, 
+                where special menus or special items are typically highlighted.
+             </p>
+             <p>
+                These issues can negatively impact user experience by making 
+                it more difficult for users, especially these with disabilities, to access comprehensive information
+                about the drinks on different menus and remember where to find them next time they visit the page.  As a result, 
+                it may deter potential customers from then ordering items from the cafe or visiting it in-person.
+             </p>
+        </div>
+
+        <div class="section-2">
+            <h2>How can we redesign the page?</h2>
+            <p>
+                Let's start by designing a visual style guide for the 
+                webpage (see scrollable image below). Inspired by the original website's 
+                colors and typography, our style guide assigns distinct color codes 
+                to different menus and applies different typography styles to menu 
+                sections to create a clear informational hierarchy (e.g. menu title is semi-bolded, item description is light italic).
+            </p>
+            <p>
+                The primary colors preserve the earthy, calm tone of the original page, 
+                while the fresh secondary colors used on buttons help serve as visual indicators for the different menus.
+            </p>
+            <div class="sketch">
+                <img src="style.png" alt="Visual style guide of the redesigned webpage">
+            </div>
+            <p>
+                Next, we can create Figma mockups (prototypes) for the redesign. To accommodate 
+                different screen sizes, we need to design responsive mockups for 
+                desktop (width > 1200px), tablet (600-1200px width), and mobile (width < 600px) users. 
+            </p>
+            <p>
+                As shown in the scrollable desktop mockup below, we added an overall explanation of the menu sections 
+                as well as three color-coded buttons that direct users to their desired menu. Also, the menu sections 
+                are now built as tables with aria labels for screenreaders, rather than static images, so users with 
+                accessibility needs can access the same information as other users.
+            </p>
+            <p>
+               While the original page includes a long description about the Ceremony tea house, it is removed in the redesigned 
+               version since this information is already included on other pages of the website.
+            </p>
+            <p class="italic">Desktop version of the prototype</p>
+            <div class="sketch">
+                <img src="desktop.png" alt="Prototype of the redesigned webpage (desktop version)">
+            </div>
+            <p>
+                In the scrollable tablet and mobile versions below, the number of items per row decreases to 
+                reduce information overload but still preserves information completeness. However, styles such as 
+                flex box, spacing, and font size remain the same, except for the spacing between buttons and 
+                the font size of the nav bar items.
+            </p>
+            <p class="italic">Tablet version of the prototype</p>
+            <div class="sketch-2">
+                <img src="tablet.png" alt="Prototype of the redesigned webpage (tablet version)">
+            </div>
+            <br>
+            <p class="italic">Mobile version of the prototype</p>
+            <div class="sketch-3">
+                <img src="mobile.png" alt="Prototype of the redesigned webpage (mobile version)">
+            </div>
+            <p>
+                In the mobile version above, the navigation bar turns into an expandable hamburger 
+                menu, and the buttons stack on top of each other vertically to maintain a clean and concise layout. 
+            </p>
+            <p>
+                After deploying our <a href="https://cs1300-hw4-redesigned-website.vercel.app/">redesigned webpage</a>, 
+                we ran it through the WAVE tool, which detected no regular or contrast errors (see screenshot below) 
+                and confirmed the inclusion of aria labels. This tells us that our updated 
+                website is more accessible than before!
+            </p>
+            <div class="sketch">
+                <img src="wave_evaluation.png" alt="WAVE evaluation results of redesigned webpage">
+            </div>
+            <p>
+                Note that the nav bar links in the redesigned page still redirect users to the old 
+                Ceremony pages. Since we can't access the original social media icons used in the footer, they have been changed to plain images.
+            </p>
+            <p>
+                Overall, our redesign addresses the usability and accessibility issues identified in the following ways:
+                <div class="bubble-1">
+                <ul>
+                    <li>Better learnability through clear menu explanations and a logical information hierarchy</li>
+                    <br>
+                    <li>Better memorability by using color-coded menu buttons to help users recall and navigate between different menus easily</li>
+                    <br>
+                    <li>Better efficiency by quickly directing users to the menu section they are interested in through the click of menu buttons</li>
+                    <br>
+                    <li>Better accessibility by making each menu take up bulk of the page space and by adding arial labels for all the drinks in each menu subsection table</li>
+                </ul>
+                </div>
+            </p>
+        </div>
+
+        <div>
+            <h2>What have we learned from this exercise?</h2>
+            <p>
+                To summarize, in this webpage, we learned about how to 
+                redesign a website to improve its usability and accessibility. 
+                This is important for ensuring the website not only conveys 
+                relevant information, but does so in a way that is friendly 
+                and intuitive to users with different levels of experience 
+                and accessibility needs. In the future, perhaps you can apply 
+                the same structure to analyze and redesign other websites 🤔
+            </p>
+        </div>
+      </main>      
+</body>
+</html>
