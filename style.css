@@ -7,6 +7,17 @@ body {
     padding: 0;
 }
 
+.outer-container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+.explanation {
+   max-width: 70%;
+}
+
 .header {
     text-align: center;
     background-color: #8c81c4;
