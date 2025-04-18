@@ -161,12 +161,12 @@
                   After sharing our low-fidelity wireframes with Sesame's product team (advisor Ravi Mehta and design lead Chris Chon), we received thoughtful and actionable feedback. Below is a summary of the key themes:
                 </p>
                 <ul class="explanation">
-                    <li>Home page: The team liked the simplicity and modular layout of the homepage. Chris encouraged stronger visual treatments in the HiFi version.</li>
+                    <li>Home page: The team liked the simplicity and modular layout of the homepage. </li>
                     <li>Home page: Ravi suggested refining topic categories. Chris questioned headers like "Featured" and "Not sure where to start," and pushed us to back these choices with user research.</li>
-                    <li>Article page: They emphasized the need for consistent thumbnails and styling across articles. Ravi asked for clear image selection guidelines as content scales.</li>
-                    <li>AI assistant page: Ravi pointed out that users often struggle with search and medical jargon. Both urged us to create a more <b>assistive and exploratory</b> search flow to guide passive users toward discovery.</li>
-                    <li>AI assistant page: Chris encouraged prototyping interactive elements like fact-checking and CTAs such as "ask me questions."</li>
-                    <li>Provider dashboard: Both were excited about the AI insights section and suggested additional metrics to motivate providers, along with personalization for logged-in users.</li>
+                    <li>Article page: They emphasized the need for consistent styling across articles, as well as the possibility of including related content and utilize the knowledge of authenticated users in the insights section. </li>
+                    <li>AI assistant page: Ravi pointed out the need to balance between modular approach while also ensuring usability of the page.</li>
+                    <li>AI assistant page: Chris encouraged further prototyping interactive elements like fact-checking.</li>
+                    <li>Provider dashboard: Both were excited about the AI insights section; Chris suggested including more meaningful stats to better motivate providers, while Ravi emphasized offering clearer guidance on what topics providers should write about.</li>
                 </ul>
               </div>
               
@@ -183,53 +183,51 @@
                     <img src="Blog homepage.png" alt="Hi-Fi Blog Homepage">
                 </div>
                 <ul class="explanation">
-                    <li>Introduced a bold hero section with a search bar and helpful query prompts to guide users toward active content discovery.</li>
-                    <li>Enhanced the Featured and Recent Articles with large thumbnails and clear overlays to highlight high-value content.</li>
-                    <li>Added a "Not Sure Where to Get Started?" section with topic-based navigation to support first-time or uncertain users.</li>
+                    <ul class="explanation">
+                        <li>Integrated a bold hero section with guided search prompts, directly addressing feedback about shifting users from passive reading to active exploration.</li>
+                        <li>Enhanced search functionality with natural language support, reflecting concerns about users struggling with medical jargon or not knowing what to search for.</li>
+                        <li>Redesigned the article layout to emphasize high-impact content, implementing feedback on improving visual hierarchy and user flow through the homepage.</li>
+                    </ul>
                 </ul>
                 
-                
-
                 <h3>Page 2: Individual Article Page</h3>
                 <div class="lofi-prototype">
                     <img src="Blog subpage.png" alt="Hi-Fi Article Subpage">
                 </div>
                 <ul class="explanation">
-                    <li>Integrated provider profile with direct "Book Appointment" and "Ask Questions" CTAs to streamline patient action-taking.</li>
-                    <li>Article content is structured with headers, callout boxes, and bulleted lists to support scanning and comprehension.</li>
-                    <li>Optional embedded video in the hero section offers an alternative to text-heavy content for different user preferences.</li>
+                    <li>The hi-fi design addressed the first feedback by moving the video to the hero section. For articles without a video, a hero image
+                        can be placed instead, making the overall layout more consistent.
+                    <li>The hi-fi design incorporated the second piece of feedback by adding an “Explore More” section 
+                        at the end of each article, recommending similar content to encourage continued engagement.</li>
+                    <li>The hi-fi design responded to the third feedback by tailoring the AI-generated key insights based on user data—for example, their demographics or health concerns.
+                    </li>
                 </ul>
-                
 
                 <h3>Page 3: Provider Dashboard</h3>
                 <div class="lofi-prototype">
                     <img src="Dashboard.png" alt="Hi-Fi Provider Dashboard">
                 </div>
                 <ul class="explanation">
-                    <li>Displays article count, reads, bookings, and conversion rate with rank context, allowing providers to track growth at a glance.</li>
-                    <li>Highlights trending topics and suggested content creation areas based on user interest and platform trends.</li>
-                    <li>Clear CTAs for “Create Articles,” “Use Drafty AI,” and “View Performance” encourage frequent publishing and experimentation.</li>
+                    <li>Displays article count, reads, bookings, and conversion rate with rank context (e.g., “Top 1% performer”), reflecting feedback to incentivize providers through status and performance comparison.</li>
+                    <li>Highlights trending topics and suggested content creation areas based on user interest and platform trends, addressing feedback about helping providers choose impactful topics.</li>
+                    <li>Clear CTAs for “Create Articles,” “Use Drafty AI,” and “View Performance” encourage frequent publishing and experimentation, aligning with feedback to turn insights into actions.</li>
                 </ul>
-                
 
                 <h3>Page 4: AI Assistant Page</h3>
                 <div class="lofi-prototype">
                     <img src="Ai tool page.png" alt="Hi-Fi Drafty AI Page">
                 </div>
                 <ul class="explanation">
-                    <li>Providers interact with Drafty in a familiar chat-based flow, making the drafting process intuitive and flexible.</li>
-                    <li>Users can highlight and directly edit content, with options to prompt Drafty for rewrites, style changes, or fact-checking within context.</li>
-                    <li>Finalized text articles are automatically converted into downloadable scripts for video generation, streamlining cross-format content creation.</li>
-                </ul>
-                
+                    <li>We incorporated the startup's feedback to ensure the AI assistant and chat input prompts clearly state the type of content expected from users at each stage of the workflow.</li>
+                    <li>We also further refined features such as the two interactive canvases as the team members requested.</li>
+                </ul>     
 
                 <h3>Page 5: Appointment Booking Flow</h3>
                 <div class="lofi-prototype">
                     <img src="highfi_appointment.png" alt="Hi-Fi Appointment Booking Flow">
                 </div>
                 <ul class="explanation">
-                    <li>Patients can book directly from within article or provider views, streamlining the journey from discovery to conversion.</li>
-                    <li>A pop-up modal keeps users anchored to the content while booking, improving retention and reducing drop-off.</li>
+                    <li>This is a new page we added where patients can book directly from within article or provider views, streamlining their journey from discovery to conversion.</li>
                     <li>Patients can browse available times across providers without toggling between multiple pages.</li>
                 </ul>
             </div>
